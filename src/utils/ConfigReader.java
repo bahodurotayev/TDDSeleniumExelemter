@@ -20,7 +20,5 @@ public class ConfigReader {
         WebDriver driver = new ChromeDriver();
         String url = properties.getProperty("url");
         driver.get(url);
-
-
     }
 }
