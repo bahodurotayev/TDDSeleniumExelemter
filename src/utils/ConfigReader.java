@@ -10,15 +10,12 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
-    public static void main(String[] args) throws IOException {
-        String filePath = System.getProperty("user.dir") + "/config/config.properties";
-        FileInputStream fileInputStream = new FileInputStream(filePath);
-        Properties properties = new Properties();
-        properties.load(fileInputStream);
-
-        String browser = properties.getProperty("browser");
-        WebDriver driver = new ChromeDriver();
-        String url = properties.getProperty("url");
-        driver.get(url);
-    }
+    public static Properties properties;
+     public static void loadProperties(String filePath){
+         try {
+             FileInputStream fileInputStream = new FileInputStream(filePath);
+         } catch (FileNotFoundException e) {
+             throw new RuntimeException(e);
+         }
+     }
 }

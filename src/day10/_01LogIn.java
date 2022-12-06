@@ -17,7 +17,7 @@ public class _01LogIn {
         Properties properties = new Properties();
         properties.load(fileInputStream);
 
-        String browser = properties.getProperty("edge");
+        String browser = properties.getProperty("chrome");
 
         switch (browser){
             case "chrome":
